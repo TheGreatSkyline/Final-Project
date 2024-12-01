@@ -79,4 +79,18 @@ function handleSquareClick(event) {
         return;
     }
 
+// Prompt to play again
+function playAgain() {
+    // Prompt to play again
+    playAgainButton.style.display = 'block';
+    // Reset the game
+    setTimeout(() => {
+        // Prompt to play again
+        if (confirm('Game over! Do you want to play again?')) {
+            // Reset the game
+            resetGame();
+        }
+    }, 100);
+    }
+    
 }
