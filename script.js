@@ -107,5 +107,16 @@ function playAgain() {
     playAgainButton.style.display = 'none';
     }
     
-
+    // Add event listeners to squares and play again button
+    squares.forEach(square => square.addEventListener('click', handleSquareClick));
+    // Add event listener to play again button
+    playAgainButton.addEventListener('click', resetGame);
+    
+    // Initialize UI
+    turnDisplay.textContent = currentPlayer;
+    // Initialize scoreboard
+    scoreboardX.textContent = scoreX;
+    // how many times player X has won
+    scoreboardO.textContent = scoreO;
+    // how many times player O has won
 }
