@@ -51,3 +51,11 @@ const winConditions = [
     [2, 4, 6]
 ];
 
+// create a function to Handle square click event
+function handleSquareClick(event) {
+    // Get the index of the clicked square
+    const clickedSquare = event.target;
+    // know which square was clicked
+    const clickedSquareIndex = Array.from(squares).indexOf(clickedSquare);
+
+}
