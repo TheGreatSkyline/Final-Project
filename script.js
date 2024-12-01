@@ -93,4 +93,19 @@ function playAgain() {
     }, 100);
     }
     
+    // Reset the game
+    function resetGame() {
+    // Reset game state
+    gameState = ['', '', '', '', '', '', '', '', ''];
+    // Reset UI
+    squares.forEach(square => square.textContent = '');
+    // Reset turn
+    currentPlayer = 'X';
+    // Reset turn display
+    turnDisplay.textContent = currentPlayer;
+    // Hide play again button
+    playAgainButton.style.display = 'none';
+    }
+    
+
 }
