@@ -58,4 +58,25 @@ function handleSquareClick(event) {
     // know which square was clicked
     const clickedSquareIndex = Array.from(squares).indexOf(clickedSquare);
 
+    // Prevent clicking on already occupied squares or after game is won
+    if (gameState[clickedSquareIndex] !== '' || checkWinner()) {
+        // If the square is already occupied or the game is won, do nothing
+        return;
+    }
+
+    // Update game state and UI
+    gameState[clickedSquareIndex] = currentPlayer;
+    // once a square is clicked
+    clickedSquare.textContent = currentPlayer;
+
+    // Check for a winner
+    if (checkWinner()) {
+        // If there is a winner, update the score
+        updateScore();
+        // Prompt to play again
+        playAgain();
+        // Reset the game
+        return;
+    }
+
 }
