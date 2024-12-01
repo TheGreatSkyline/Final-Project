@@ -23,3 +23,16 @@ const scoreboardO = document.getElementById('scoreboard-o');
 const scoreboardTies = document.getElementById('scoreboard-ties'); // New element for ties
 
 
+// Initialize game state variables
+// the current player
+let currentPlayer = 'X';
+// the game board
+let gameState = ['', '', '', '', '', '', '', '', ''];
+// the scoreboard
+let scoreX = 0;
+// how many times player X has won
+// how many times player O has won
+let scoreO = 0;
+// if the game is a tie
+let scoreTies = 0; // New variable for tie scores
+
